@@ -1,0 +1,20 @@
+        <h1 className="text">Admin Dashboard</h1>
+        <TableContainer>
+          <Table>
+            <TableHead>
+              <TableCell align="right">Name</TableCell>
+              <TableCell align="right">Model</TableCell>
+              <TableCell align="right">Manufacturer</TableCell>
+              <TableCell align="right">Cost_Credits</TableCell>
+            </TableHead>
+
+            {data.map((item, index) => (
+              <TableBody key={index.name}>
+                <TableCell align="right">{item.name}</TableCell>
+                <TableCell align="right">{item.model}</TableCell>
+                <TableCell align="right">{item.manufacturer}</TableCell>
+                <TableCell align="right">{item.cost_in_credits}</TableCell>
+              </TableBody>
+            ))}
+          </Table>
+        </TableContainer>
