@@ -1,5 +1,6 @@
 import { React, useState, useEffect } from 'react'
 
+
 function Result(props) {
 
     const [data, setData] = useState([]);
@@ -16,20 +17,9 @@ function Result(props) {
       fetchData();
     }, []);
 
-    const filteredData = data.filter((el) => {
-        //if no input the return the original
-        if (props.input === '') {
-            return el;
-        }
-        //return the item which contains the user input
-        else {
-            return el.text.toLowerCase().includes(props.input)
-        }
-    })
-
     return (
         <ul>
-            {filteredData.map((item) => (
+            {data.map((item) => (
                 <li key={item.uid}>{item.name}</li>
             ))}
         </ul>

@@ -4,12 +4,7 @@ import Result from "../components/Result";
 
 function Home() {
 
-    const [inputText, setInputText] = useState("");
-    let inputHandler = (e) => {
-      //convert input text to lower case
-      var lowerCase = e.target.value.toLowerCase();
-      setInputText(lowerCase);
-    }
+
 
 
 
@@ -19,13 +14,13 @@ function Home() {
       <div className="search">
         <TextField
           id="outlined-basic"
-          onChange={inputHandler}
+
           variant="outlined"
           fullWidth
           label="Search People"
         />
       </div>
-      <Result input={inputText}/>
+      <Result />
     </div>
     </>
 }
