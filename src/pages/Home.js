@@ -5,9 +5,6 @@ import Result from "../components/Result";
 function Home() {
 
 
-
-
-
     return <>
            <div className="main">
       <h1>SWAPI Search</h1>

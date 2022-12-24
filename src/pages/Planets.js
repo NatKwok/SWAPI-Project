@@ -10,6 +10,7 @@ import {
 function Planets() {
   const [data, setData] = useState([]);
 
+  //Retreive Data from Endpoint API
   const fetchData = async () => {
     fetch("https://swapi.tech/api/planets?format=json", { method: "GET" })
       .then((res) => res.json())
@@ -19,6 +20,7 @@ function Planets() {
       });
   };
 
+  //useEffect to call the function
   useEffect(() => {
     fetchData();
   }, []);

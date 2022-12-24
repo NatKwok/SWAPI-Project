@@ -10,6 +10,7 @@ import {
 function Starship() {
   const [data, setData] = useState([]);
 
+  //Retreive Data from Endpoint API
   const fetchData = async () => {
     fetch("https://swapi.tech/api/starships?format=json", { method: "GET" })
       .then((res) => res.json())
@@ -19,6 +20,7 @@ function Starship() {
       });
   };
 
+  //useEffect to call the function
   useEffect(() => {
     fetchData();
   }, []);
